@@ -1,0 +1,1 @@
+web: gunicorn tider_django.wsgi
