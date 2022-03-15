@@ -25,6 +25,7 @@ class Subreddit(models.Model):
     title = models.CharField(max_length=100, default="")
     description = models.CharField(max_length=300)
     users = models.ManyToManyField(User)
+    posts = models.ManyToManyField(Post, blank=True, null=True)
 
     def __str__(self):
         return f"Subreddit: @{self.title}"
